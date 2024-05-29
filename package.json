@@ -1,0 +1,31 @@
+{
+  "name": "next-google-maps",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 5001",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@googlemaps/markerclusterer": "^2.5.1",
+    "@vis.gl/react-google-maps": "^0.3.2",
+    "autoprefixer": "10.4.16",
+    "bootstrap": "^5.3.3",
+    "next": "13.5.2",
+    "postcss": "8.4.30",
+    "react": "18.2.0",
+    "react-bootstrap": "^2.10.2",
+    "react-bootstrap-range-slider": "^3.0.8",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@types/google.maps": "^3.54.7",
+    "@types/node": "20.6.5",
+    "@types/react": "18.2.22",
+    "@types/react-dom": "18.2.7",
+    "csv-parse": "^5.5.0",
+    "typescript": "5.2.2"
+  }
+}
