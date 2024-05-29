@@ -66,13 +66,13 @@ function Directions() {
         setPlaces((prevPlaces) => {
           if (!prevPlaces!.has(index)) {
             let newSet = new Set<google.maps.places.Place>();
-            places.forEach((place: google.maps.places.Place, i) => {
+            places.forEach((place: google.maps.places.Place) => {
               newSet.add(place!);
             });
             prevPlaces!.set(index, newSet);
           } else {
             const placeSet = prevPlaces!.get(index);
-            places.forEach((place: google.maps.places.Place, i) => {
+            places.forEach((place: google.maps.places.Place) => {
               placeSet!.add(place!);
             });
             prevPlaces!.set(index, placeSet!);
@@ -107,7 +107,7 @@ function Directions() {
 
           let centreIdx = 0;
           let checkPointIdx = 1;
-          
+
           const start = route.overview_path[0];
           const end = route.overview_path[route.overview_path.length - 1];
 
