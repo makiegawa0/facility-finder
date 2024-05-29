@@ -202,7 +202,7 @@ function Directions() {
             /> */}
             <Form.Control
               value={range}
-              onChange={(e) => setRange(e.target.value)}
+              onChange={(e) => setRange(Number(e.target.value))}
             />
           </Form.Group>
           <Button onClick={fetchRoutes}>Get Directions</Button>
@@ -238,21 +238,22 @@ function Directions() {
           </Card.Body>
         </Card>
       </div>
-      {(places.has(routeIndex) ? Array.from(places.get(routeIndex)!) : []).map(
-        (place, index) => (
-          <AdvancedMarker
-            position={place.location!.toJSON()}
-            title={"AdvancedMarker with customized pin."}
-            onClick={() => setPlaceName(place.displayName!)}
-          >
-            <Pin
-              background={colors[routeIndex]}
-              borderColor={"#1e89a1"}
-              glyphColor={"#0f677a"}
-            ></Pin>
-          </AdvancedMarker>
-        )
-      )}
+      {(places.has(routeIndex!)
+        ? Array.from(places.get(routeIndex!)!)
+        : []
+      ).map((place, index) => (
+        <AdvancedMarker
+          position={place.location!.toJSON()}
+          title={"AdvancedMarker with customized pin."}
+          onClick={() => setPlaceName(place.displayName!)}
+        >
+          <Pin
+            background={colors[routeIndex!]}
+            borderColor={"#1e89a1"}
+            glyphColor={"#0f677a"}
+          ></Pin>
+        </AdvancedMarker>
+      ))}
     </div>
   );
 }
