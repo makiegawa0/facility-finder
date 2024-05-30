@@ -7,7 +7,7 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "React Google Maps",
+  title: "Facility Nearby",
   description: "Using visgl.github.io/react-google-maps",
 };
 
